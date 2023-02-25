@@ -36,6 +36,6 @@ public class CurrencyConversionController {
     ){
 
         CurrencyConversion  currencyConversion=proxy.retrieveExchangeValue(from, to);
-        return new CurrencyConversion(currencyConversion.getId(),from,to,quantity,currencyConversion.getConversionMultiple(),quantity.multiply(currencyConversion.getConversionMultiple()),currencyConversion.getEnvironment());
+        return new CurrencyConversion(currencyConversion.getId(),from,to,quantity,currencyConversion.getConversionMultiple(),quantity.multiply(currencyConversion.getConversionMultiple()),currencyConversion.getEnvironment()+" "+"feign");
     }
 }
