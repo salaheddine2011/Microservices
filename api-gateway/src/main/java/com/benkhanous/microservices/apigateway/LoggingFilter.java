@@ -12,7 +12,6 @@ import reactor.core.publisher.Mono;
 public class LoggingFilter implements GlobalFilter {
     private Logger logger= LoggerFactory.getLogger(LoggingFilter.class);
 
-
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         logger.info("Path of the request received -> {}",exchange.getRequest().getPath());
